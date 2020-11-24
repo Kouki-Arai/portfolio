@@ -1,0 +1,282 @@
+// ↓↓↓example↓↓↓
+
+// @import "color";
+
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
+
+
+// .base-font-settings {
+//   /* using web font loader @ nuxt.config.js */
+//   font-family: 'Noto Sans JP', sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// .app-name {
+//   @extend .base-font-settings;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 42px;
+//   line-height: 63px;
+//   /* identical to box height, or 150% */
+
+//   &.__header, &.__footer {
+//     font-size: 28px;
+//     line-height: 28px;
+//     /* identical to box height, or 100% */
+
+//     text-align: center;
+
+//     //letter-spacing: 2.8px;
+//     color: white;
+//   }
+
+//   > .small {
+//     font-size: 0.6em;
+
+//     &.the {
+//       font-weight: 700;
+//     }
+
+//     &.user_type {
+//       font-weight: normal;
+//     }
+//   }
+// }
+
+// html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+//   font-family: 'Noto Sans JP', sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+// }
+
+// input, textarea {
+//   margin: 0;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+
+//   @include sp2 {
+//     font-size: 16px !important;
+//   }
+// }
+
+// .heading-1 {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 44px;
+//   line-height: 64px;
+//   /* identical to box height, or 145% */
+
+//   //display: flex;
+//   //align-items: center;
+
+//   color: $text-01
+// }
+
+// .heading-2 {
+//   @extend .base-font-settings;
+//   font-weight: bold;
+//   font-size: 32px;
+//   line-height: 48px;
+//   /* identical to box height, or 150% */
+
+//   //display: flex;
+//   //align-items: center;
+
+//   color: $text-01;
+// }
+
+// .heading-3 {
+//   @extend .base-font-settings;
+//   font-weight: bold;
+//   font-size: 24px;
+//   line-height: 32px;
+//   /* identical to box height, or 133% */
+
+//   //display: flex;
+//   //align-items: center;
+
+//   color: $text-01
+// }
+
+// .heading-4 {
+//   @extend .base-font-settings;
+//   font-weight: bold;
+//   font-size: 18px;
+//   line-height: 24px;
+//   /* identical to box height, or 133% */
+//   //display: flex;
+//   //align-items: center;
+
+//   color: $text-01
+// }
+
+// .heading-5 {
+//   @extend .base-font-settings;
+//   font-weight: bold;
+//   font-size: 16px;
+//   line-height: 24px;
+//   /* identical to box height, or 150% */
+
+//   //display: flex;
+//   //align-items: center;
+
+//   color: $text-01
+// }
+
+// .heading-6 {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 24px;
+//   /* identical to box height, or 171% */
+
+//   //display: flex;
+//   //align-items: center;
+//   letter-spacing: 0.75px;
+//   text-transform: uppercase;
+
+//   color: $text-01
+// }
+
+// .heading-sub {
+//   font-family: Fjalla One, serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 12px;
+//   line-height: 16px;
+//   /* identical to box height, or 133% */
+
+//   //display: flex;
+//   //align-items: center;
+//   letter-spacing: 1.2px;
+
+//   color: rgba(0, 0, 0, 0.7);;
+// }
+
+// .body-1 {
+//   @extend .base-font-settings;
+//   font-size: 16px;
+//   line-height: 32px;
+//   /* or 200% */
+//   color: $text-02
+// }
+
+// .text-link {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 32px;
+//   /* identical to box height, or 200% */
+
+//   text-decoration-line: underline;
+
+//   color: $brand-01;
+// }
+
+// .body-2 {
+//   @extend .base-font-settings;
+//   font-size: 14px;
+//   line-height: 24px;
+//   /* identical to box height, or 171% */
+
+//   color: $text-02
+// }
+
+// .body-2_semi_bold {
+//   @extend .body-2;
+//   font-weight: 500;
+// }
+
+// .large-paragraph {
+//   @extend .base-font-settings;
+//   font-size: 20px;
+//   line-height: 40px;
+//   /* or 200% */
+
+//   color: $text-02
+// }
+
+// .large-text-link {
+//   @extend .base-font-settings;
+//   font-size: 20px;
+//   line-height: 40px;
+//   /* identical to box height, or 200% */
+
+//   text-decoration-line: underline;
+
+//   color: $brand-01
+// }
+
+// .caption {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 16px;
+//   /* identical to box height, or 133% */
+//   color: $text-025
+// }
+
+// .quotation {
+//   @extend .base-font-settings;
+//   font-size: 20px;
+//   line-height: 32px;
+//   /* or 160% */
+//   color: $text-02
+// }
+
+// .button-text {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 16px;
+//   /* identical to box height, or 114% */
+
+//   display: flex;
+//   align-items: center;
+
+//   /* Brand / 01 */
+
+//   color: $brand-01
+// }
+
+// .input-label {
+//   @extend .base-font-settings;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 16px;
+//   /* identical to box height, or 114% */
+
+//   display: flex;
+//   align-items: center;
+
+//   /* Text / 01 */
+
+//   color: $text-01
+// }
+
+// .property-header-value {
+//   @extend .base-font-settings;
+//   font-weight: bold;
+//   font-size: 20px;
+//   line-height: 32px;
+//   /* identical to box height, or 160% */
+
+//   /* Text / 01 */
+
+//   color: $text-01;
+// }
+
+// .table-cell-text {
+//   @extend .base-font-settings;
+//   font-weight: normal;
+//   font-size: 12px;
+//   line-height: 18px;
+//   /* Text / 01 */
+//   color: $text-01;
+// }

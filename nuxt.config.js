@@ -15,6 +15,9 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['element-ui/lib/theme-chalk/index.css'],
+  styleResources: {
+    scss: ['~/assets/sass/color.scss', '~/assets/sass/typography.scss'],
+  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/element-ui'],
@@ -26,6 +29,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
